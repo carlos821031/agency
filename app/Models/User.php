@@ -66,4 +66,19 @@ class User extends Authenticatable
     public function assistances(){
         return $this->hasMany('App\Models\Assistance');
     }
+
+    /*Adminlte imagen de perfil en el menu si esta abilitada esa opcion*/
+    public function adminlte_image(){
+        return 'http://picsum.photos/300/300';//url a la imagen
+       }
+
+       /*Adminlte mostrar el rolo q pertenece el usuario en el menu superior derecho si esta abilitado*/
+       public function adminlte_desc(){
+        return 'Rol';//Rol q pertenece
+       }
+
+       /*Adminlte boton de perfil en el menu superior derecho si esta abilitada la opcion si esta abilitada esa opcion*/
+    public function adminlte_profile_url(){
+        return 'user/profile';//url al perfil
+       }
 }

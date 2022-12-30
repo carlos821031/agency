@@ -14,9 +14,9 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => '',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => ' | Cubarama dmc',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,12 +45,12 @@ return [
     | For detailed instructions you can look the google fonts section here:
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
     |
-    */
+    
 
     'google_fonts' => [
         'allowed' => true,
     ],
-
+*/
     /*
     |--------------------------------------------------------------------------
     | Admin Panel Logo
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Cubarama</b> dmc',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'Cubarama dmc',
 
     /*
     |--------------------------------------------------------------------------
@@ -130,11 +130,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,//defaul false
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_image' => false,//defaul false
+    'usermenu_desc' => true,//defaul false
+    'usermenu_profile_url' => true,//defaul false
 
     /*
     |--------------------------------------------------------------------------
@@ -150,10 +150,10 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,//dejar fijo el menu izquierdo
+    'layout_fixed_navbar' => true,//dejar fijo el menu superior
     'layout_fixed_footer' => null,
-    'layout_dark_mode' => null,
+    'layout_dark_mode' => null,//modo oscuro
 
     /*
     |--------------------------------------------------------------------------
@@ -164,7 +164,7 @@ return [
     |
     | For detailed instructions you can look the auth classes section here:
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
+    | personalizar el sistema de login y registros si estuviera utilizando el de el
     */
 
     'classes_auth_card' => 'card-outline card-primary',
@@ -183,20 +183,20 @@ return [
     |
     | For detailed instructions you can look the admin panel classes here:
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
+    |Estilos al todo el panel
     */
 
-    'classes_body' => '',
-    'classes_brand' => '',
-    'classes_brand_text' => '',
-    'classes_content_wrapper' => '',
-    'classes_content_header' => '',
-    'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
-    'classes_topnav_nav' => 'navbar-expand',
-    'classes_topnav_container' => 'container',
+    'classes_body' => '', //clase q se aplica a todo el body d-none
+    'classes_brand' => 'bg-white',//Estilo al area del logo en el menu izq superior bg-white. por defeto vacio
+    'classes_brand_text' => '',//Estilo al testo del area del logo en el menu lateral izq. por defecto vacio.
+    'classes_content_wrapper' => '',//Todo el contenido de la parte q pertenece a la session de contenido.
+    'classes_content_header' => '',//Area del titulo del wrapper bg-primary. 
+    'classes_content' => '',//content del wrapper. d-none
+    'classes_sidebar' => 'sidebar-dark-primary elevation-4',//solo se puede cambiar a 'sidebar-light-primary elevation-4' el primary representa el color del boton activo en el menu
+    'classes_sidebar_nav' => '',//nombre de clase q se aplicara al menu lateral izq
+    'classes_topnav' => 'navbar-white navbar-light',//clases al menu superior ejemplo 'navbar-info navbar-light'
+    'classes_topnav_nav' => 'navbar-expand',//por defecto 'navbar-expand',
+    'classes_topnav_container' => 'container',//por defecto 'container'
 
     /*
     |--------------------------------------------------------------------------
@@ -294,7 +294,7 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => true,
+            'topnav_right' => false,//por defecto true
         ],
         [
             'type'         => 'fullscreen-widget',
@@ -302,10 +302,23 @@ return [
         ],
 
         // Sidebar items:
+        ['header' => 'asistence'],       
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text'       => 'asistences_1',
+            'icon_color' => 'red',
+            'url'        => '#',
         ],
+        [
+            'text'       => 'import_1',
+            'icon_color' => 'yellow',
+            'url'        => '#',
+        ],
+        [
+            'text'       => 'list_1',
+            'icon_color' => 'cyan',
+            'url'        => '#',
+        ],
+        ['header' => 'houses'],        
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -321,7 +334,7 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
