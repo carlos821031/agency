@@ -190,5 +190,19 @@
     "You may delete any of your existing tokens if they are no longer needed.": "Puede eliminar cualquiera de sus tokens existentes si ya no los necesita.",
     "You may not delete your personal team.": "No se puede borrar su equipo personal.",
     "You may not leave a team that you created.": "No se puede abandonar un equipo que usted creó.",
-    "Your email address is unverified.": "Su dirección de correo electrónico no está verificada."
+    "Your email address is unverified.": "Su dirección de correo electrónico no está verificada.",
+    "Dashboard | Houses.": "Panel | Casas.",
+    "REF. Zucchetti": "REF. Zucchetti",
+    "AGENCY": "AGENCIA",
+    "CLIENTS": "CLIENTES",
+    "SERVICES": "SERVICIOS",
+    "DATE IN": "FECHA IN",
+    "DATE OUT": "FECHA OUT",
+    "OBSERVACIONES": "OBSERVACIONES",
+    "PROVEEDOR": "PROVEEDOR",
+    "COSTOS UNITARIOS (USD/MLC)": "COSTOS UNITARIOS (USD/MLC)",
+    "CANT HAB": "CANT HAB",
+    "CANT NOCHES": "CANT NOCHES",
+    "COSTO TOTAL (USD/MLC)": "COSTO TOTAL (USD/MLC)",
+    "PAX": "PAX"    
 }
